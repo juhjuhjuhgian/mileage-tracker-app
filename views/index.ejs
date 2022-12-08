@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unofficial State Mileage Report History Tracker</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unofficial State Mileage Report History Tracker</title>
+</head>
+<body>
+    <h1>Mileage Report History Log</h1>
+        <section class="container">
+            <div class="one">
+                <h2>Fill in the following fields:</h2>
+
+                <form action="/addNewEntry" method="POST">
+                    <h3>Select Date</h3>
+                    <input type="date" name="currentDay">
+                        <h3>Select Vehicle:</h3>
+                        <div>
+                        <input type="radio" name="vehicleUsed" value="Malibu"/>
+                        <label for="choice1">Malibu</label>
+                    
+                        <input type="radio"  name="vehicleUsed" value="Impala"/>
+                        <label for="choice2">Impala</label>
+                        </div>
+                    <h3>Odometer Start</h3>
+                    <input type="number" placeholder="Beginning Mileage" name="odoStart">
+                    <br></br>
+                    <h3>Odometer End</h3>
+                    <input type="number" placeholder="Ending Mileage" name="odoEnd">
+                    <br></br>
+                    <h3>Driver</h3>
+                    <input type="text" placeholder="Driver Name" name="driver">
+                    <br></br>
+                    <input type="submit">
+                </form>
+            </div>
+            <br></br>
+            <div class="two"></div>
+                <table class="logHistory">
+                        <tr>
+                            <th>Date</th>
+                            <th>Vehicle</th>
+                            <th>Odo Start</th>
+                            <th>Odo End</th>
+                            <th>Driver</th>
+                        </tr>
+                    <% for(let i=0; i < info.length; i++) {%>
+                        <tr class="day">
+                            <td><%= info[i].currentDay %></td>
+                            <td><%= info[i].vehicleUsed %></td>
+                            <td><%= info[i].odoStart %></td>
+                            <td><%= info[i].odoEnd %></td>
+                            <td><%= info[i].driver %></td>
+                            <td class='fa fa-trash'></td>
+                        </tr>
+                    <% } %>
+                    </table>
+            </div>
+        </section>
+    <script src='js/main.js'></script>
+</body>
+</html>
