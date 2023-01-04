@@ -39,6 +39,29 @@ app.post('/addNewEntry', (request, response) => {
     .catch(error => console.error(error))
 })
 
+app.put('/editEntry', async (request, response) => {
+    try {
+        const entryId = await request.body.itemFromJS
+        await db.collection('logHistory').findOneAndUpdate({_id: entryId},{ 
+            $set: {
+            first: request.body.first, 
+            second: request.body.second, 
+            third: request.body.third,
+            fourth: request.body.fourth, 
+            fifth: request.body.fifth
+            }
+    },
+{
+        upsert: false
+     })
+    console.log('Updated Entry')
+    return response.json('Updated It')
+     response.redirect('/')
+} catch(err) {
+    console.log(err)
+}
+})
+
 app.delete('/deleteEntry', (request, response) => {
     db.collection('logHistory').deleteOne({odoStart: request.body.begOdo, odoEnd: request.body.endOdo})
     .then(result => {

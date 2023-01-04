@@ -58,11 +58,12 @@
                         </tr>
                     <% for(let i=0; i < info.length; i++) {%>
                         <tr class="day">
-                            <td><%= info[i].currentDay %></td>
-                            <td><%= info[i].vehicleUsed %></td>
-                            <td><%= info[i].odoStart %></td>
-                            <td><%= info[i].odoEnd %></td>
-                            <td><%= info[i].driver %></td>
+                            <td id="first"><%= info[i].currentDay %></td>
+                            <td id="second"><%= info[i].vehicleUsed %></td>
+                            <td id="third"><%= info[i].odoStart %></td>
+                            <td id="fourth"><%= info[i].odoEnd %></td>
+                            <td id="fifth"><%= info[i].driver %></td>
+                            <td class='fa fa-edit'></td>
                             <td class='fa fa-trash'></td>
                         </tr>
                     <% } %>
