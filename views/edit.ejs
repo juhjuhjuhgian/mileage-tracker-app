@@ -6,13 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Unofficial State Mileage Report History Tracker</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
-<body>
-    <h1>Mileage Report History Log</h1>
+<body class="b2">
         <section class="container">
-            <div class="one">
-                <h2>Fill in the following fields:</h2>
+            <!-- <div class="one">
+                <h2>Update fields:</h2>
 
                 <form action="/" method="POST">
                     <h3>Select Date</h3>
@@ -36,7 +35,7 @@
                     <br></br>
                     <input type="submit">
                 </form>
-            </div>
+            </div> -->
             <br></br>
             <div>
             <table class="logHistory">
@@ -47,8 +46,38 @@
                     <th>Odo End</th>
                     <th>Driver</th>
                 </tr>
-            <ul class="mileage-list">
                 <% mileageEntries.forEach(info => { %>
+                    <% if (info._id==idOfEntry) { %>
+
+                            <h1>Update Fields:</h1>
+
+                            <form action="/edit/<%= info._id %>" method="POST">
+                                <h3>Select Date</h3>
+                                <input type="date" name="currentDay">
+                                    <h3>Select Vehicle:</h3>
+                                    <div>
+                                    <input type="radio" name="vehicleUsed" value="Malibu"/>
+                                    <label for="choice1">Malibu</label>
+                                
+                                    <input type="radio"  name="vehicleUsed" value="Impala"/>
+                                    <label for="choice2">Impala</label>
+                                    </div>
+                                <h3>Odometer Start</h3>
+                                <input type="number"  placeholder="<%= info.odoStart %>" name="odoStart">
+                                <br></br>
+                                <h3>Odometer End</h3>
+                                <input type="number" placeholder="<%= info.odoEnd %>" name="odoEnd">
+                                <br></br>
+                                <h3>Driver</h3>
+                                <input type="text" placeholder="<%= info.driver %>" name="driver">
+                                <br></br>
+                                <button type="submit" class="confirm">Confirm</button>
+                                <br>
+                                <br>
+                                <a href="/" class="cancel">Cancel</a>
+                            </form>
+                        </li>
+                        <% } else { %>
                     <tr class="mileage-list-item">
                         <td class="mileage-list-item-currentDay"><%= info.currentDay %></td>
                         <td class="mileage-list-item-vehicleUsed"><%= info.vehicleUsed %></td>
@@ -58,14 +87,13 @@
                         <td><a href="/edit/<%= info._id %>" class="edit">
                         <span class="fas fa-edit"></span>
                         </a></td>
-                        <td><a href="/delete/<%= info._id %>" class="delete">
-                            <span class="fas fa-trash"></span>
-                            </a></td>
+                        <td class='fa fa-trash'></td>
                     </tr>
+                    <% } %>
                 <% }) %>
             </table>
             </div>
-            </ul>
+
 
         </section>
     <script src='js/main.js'></script>

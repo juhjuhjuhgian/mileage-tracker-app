@@ -7,7 +7,9 @@ body{
     background-image: linear-gradient(to right, steelblue , gray);
     color: black;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
 }
+
 .one{
     text-align: center;
     font-size: 0.9em;
@@ -23,9 +25,15 @@ table, th, td {
     border: 1px solid black;
     border-collapse: collapse;
   }
+  
 td {
     font-size: 1.1em;
 }
-.fa-edit, .fa-trash{
-    font-size: 1.8em;
+
+.edit, .fa-edit, .fa-trash{
+    text-decoration: none;
+    color: black;
+}
+.logHistory{
+    text-align: center;
 }
