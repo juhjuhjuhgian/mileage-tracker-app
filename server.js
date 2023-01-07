@@ -1,7 +1,6 @@
 const express = require('express')
 const app = express()
 // const MongoClient = require('mongodb').MongoClient
-const PORT = 2121
 const mongoose = require('mongoose')
 const MileageEntry = require('./models/mileage')
 require('dotenv').config()
