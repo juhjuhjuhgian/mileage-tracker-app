@@ -4,7 +4,7 @@ const app = express()
 const mongoose = require('mongoose')
 const MileageEntry = require('./models/mileage')
 const PORT = process.env.PORT || PORT
-require('dotenv').config({path: __dirname+'/Users/gian/Desktop/Homework/mileage-app/.env'})
+require('dotenv').config({debug : true})
 
 
 // let db,
