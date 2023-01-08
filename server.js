@@ -3,8 +3,8 @@ const app = express()
 // const MongoClient = require('mongodb').MongoClient
 const mongoose = require('mongoose')
 const MileageEntry = require('./models/mileage')
-const PORT = process.env.PORT || PORT
-require('dotenv').config({debug : true})
+const PORT = process.env.PORT || 2121
+require('dotenv').config()
 
 
 // let db,
