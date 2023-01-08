@@ -13,9 +13,10 @@ Built an app that stores and tracks data submitted by the user. This will be use
 This was my first CRUD app that I created on my own. I used an EJS file to handle the dynamic content coming from the database and used a for loop to handle that data. The fields took a little time to figure out as far as tying that to the server.js file. The event listener on the client-side js file handled the click events for deleting and submitting of a new 'day log entry'. After getting the data provided by the client to successfully be sent to MongoDB, I kind of wanted to create a two-column deal but since the people using it would be on mobile mostly, I reverted back to just centering everything. The server.js file was a fun challenge, figuring out how to have the DB respond with data and having that data sent to the EJS file. I didn't end up needing an 'update' method in this app.
 
 ## Optimizations
-*(optional)*
 
 Although not totally necessary, I could have added an update method if a part of an entry was wrong. The delete button kind of handled that, but it would be good practice. The other thing I wanted to implement and kind of looked into was storing the months in folders. Over time the log will either make the page extremely long or someone will have to manually click delete a bunch of times to old entries. A few other things would be to add a caption box for comments on a log and adding an 'other' option to the radio input for vehicle used, and the option would allow you to type in the input.
+
+1/7/22 Update: I completed a way to update entries and bypassed the main.js and a fetch request because forms don't support PUT requests. I used a post method as the form makes it easier to send the data to the server side. It took longer than I thought it would as I also added mongoose to build a schema for my database and I had some problems hosting the site toward the end.
 
 ## Lessons Learned:
 
