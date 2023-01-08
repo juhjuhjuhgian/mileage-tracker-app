@@ -3,7 +3,7 @@ const app = express()
 // const MongoClient = require('mongodb').MongoClient
 const mongoose = require('mongoose')
 const MileageEntry = require('./models/mileage')
-const port = process.env.PORT || PORT
+const PORT = process.env.PORT || PORT
 require('dotenv').config()
 
 
