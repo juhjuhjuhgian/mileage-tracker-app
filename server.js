@@ -3,7 +3,8 @@ const app = express()
 // const MongoClient = require('mongodb').MongoClient
 const mongoose = require('mongoose')
 const MileageEntry = require('./models/mileage')
-require('dotenv').config()
+const PORT = process.env.PORT || PORT
+require('dotenv').config({path: '/.env'})
 
 
 // let db,
@@ -145,6 +146,6 @@ app
         });
     });
 
-app.listen(process.env.PORT || PORT, ()=>{
+app.listen(PORT, ()=>{
     console.log(`Server running on port ${PORT}`)
 })
