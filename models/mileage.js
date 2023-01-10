@@ -14,7 +14,7 @@ const mileageSchema = new mongoose.Schema({
     },
     odoEnd: {
         type: Number,
-        required: true
+        required: false
     },
     driver: {
         type: String,
