@@ -18,6 +18,8 @@ Although not totally necessary, I could have added an update method if a part of
 
 1/7/22 Update: I completed a way to update entries and bypassed the main.js and a fetch request because forms don't support PUT requests. I used a post method as the form makes it easier to send the data to the server side. It took longer than I thought it would as I also added mongoose to build a schema for my database and I had some problems hosting the site toward the end.
 
+5/21/23 Update: Submissions have been getting deleted by visitors of the application. A new optimization will be to implement log in via Passport
+
 ## Lessons Learned:
 
 It was so fascinating to see how the information that was sent from the client side went to the server side, then went to the database and back, all to be spit back out in less than a second! Really gave me an appreciation for the internet and its massiveness/speediness.
