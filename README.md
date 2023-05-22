@@ -1,4 +1,4 @@
-# Mileage Tracker App
+# Mileage Counter Co.
 
 Built an app that stores and tracks data submitted by the user. This will be used by myself and my coworkers as we use a state licensed vehicles and mileage has to be tracked. Prior to the app, we logged daily useage on physical papers which were often lost or forgotten about, only to have to backtrack at the end of the month the beginning and ending dates of the day(s) in question. Not anymore!
 
@@ -23,6 +23,3 @@ Although not totally necessary, I could have added an update method if a part of
 ## Lessons Learned:
 
 It was so fascinating to see how the information that was sent from the client side went to the server side, then went to the database and back, all to be spit back out in less than a second! Really gave me an appreciation for the internet and its massiveness/speediness.
-
-
-
